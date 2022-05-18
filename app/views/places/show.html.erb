@@ -1,3 +1,13 @@
 <h1><%= @place["name"] %></h1>
 
+<!-- This loop is supposed to save and show
+relevant data for each post; i cannot figure out how
+to get my posts to save for each city--->
+
+<% for post in @posts %>
+  <p><%= post[title] %></p>
+  <p><%= post["posted_on"] %></p>  
+  <p><%= post["description"] %></p> 
+<% end %>
+
 <p><a href="/posts/new">Create a new post</a></p>
