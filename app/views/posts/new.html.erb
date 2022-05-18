@@ -1,0 +1,28 @@
+<h1>New Post</h1>
+<!--A form to create a new post for a place, 
+containing a hidden field to pass on to the create action>
+-->
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "Place Name" %>
+    <%= form.text_field "name" %>
+  </p>
+
+  <p>
+    <%= form.label "Title" %>
+    <%= form.text_field "title" %>
+  </p>
+
+  <p>
+    <%= form.label "Description" %>
+    <%= form.text_area "description",size:"60x10" %>
+  </p>
+
+  <p>
+    <%= form.label "Posted On" %>
+    <%= form.date_field "posted_on" %>
+  </p>
+
+   <%= form.hidden_field "place_id" %>
+  <p><%= form.submit %></p>
+<% end %>

@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>StarterApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="..." />
-    <link rel="stylesheet" href="/stylesheets/application.css" />
-  </head>
+<!--<h1>Places I've Been</h1>
+ 
+ <ul>
+   <% for place in @places %>
+    <li>
+     <%= place["name"] %>
+    </li>
+   <% end %>
+</ul>
 
-  <body>
-  <% places = ["Mexico City", "Charleston", "Beijing", "Amsterdam"] %>
-    <h1>Places I've Been</h1>
-    <p>
-  <% for place in places %>
-    <p><%= place %></p>
-  <% end %>
-    </p>
-    <p>New Place</p>
-  </body>
+<p><a href="/places/new">New Place</a></p>
+-->
+<h1> Places</h1>
+<ul>
+    <%for place in @places %>
+        <p>
+        <a href="/places/<%= place["id"] %>"><%= place["name"]%></a>
+        </p>
+    <% end %>
+</ul>
+<p><a href="/places/new">Create a new place</a></p>
