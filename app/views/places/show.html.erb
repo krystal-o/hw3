@@ -5,9 +5,10 @@ relevant data for each post; i cannot figure out how
 to get my posts to save for each city--->
 
 <% for post in @posts %>
-  <p><%= post[title] %></p>
+  <p><h2><%= post["title"] %></h2></p>
   <p><%= post["posted_on"] %></p>  
   <p><%= post["description"] %></p> 
 <% end %>
 
-<p><a href="/posts/new">Create a new post</a></p>
+<p><a href="/posts/new?place_id=<%= @place.id %>">Create a new post</a></p>
+<p><a href="/places/">Back to Places</a></p>
